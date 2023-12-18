@@ -1,10 +1,15 @@
 package lk.itech.projectone.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Entity
-@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Person {
 
     @Id
@@ -19,4 +24,5 @@ public class Person {
 
     @Column(name = "active_status", length = 1)
     private int activeStatus;
+
 }
